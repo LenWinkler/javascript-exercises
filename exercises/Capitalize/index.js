@@ -12,7 +12,23 @@
  */
 
 function capitalize(str) {
+    let strArr = str.split('');
+    let caps = '';
 
+    for (i = 0; i < strArr.length; i++) {
+        if (strArr[i] === ' ' || strArr[i] === [/^a-z/]) {
+            caps += strArr[i]
+        } else if (i === 0) {
+            caps += strArr[i].toUpperCase()
+        } else if (strArr[i - 1] === ' ') {
+            caps += strArr[i].toUpperCase()
+        } else {
+            caps += strArr[i]
+        }
+    }
+
+    return caps;
+    
 }
 
 module.exports = capitalize;
