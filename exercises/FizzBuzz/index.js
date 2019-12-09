@@ -18,6 +18,13 @@
 
 function fizzBuzz(n) {
 
+    for (i = 0; i < n; i++) {
+        i >= 3 && i % 3 === 0 && i % 5 === 0 ? console.log('fizzbuzz')
+        : i >= 3 && i % 3 === 0 ? console.log('fizz')
+        : i >= 5 && i % 5 === 0 ? console.log('buzz')
+        : console.log(i)
+    }
+
 }
 
 module.exports = fizzBuzz;
