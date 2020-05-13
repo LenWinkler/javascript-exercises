@@ -1,4 +1,4 @@
-const fizzBuzz = require('./index');
+const fizzBuzz = require('./index.js');
 
 describe('FizzBuzz function', () => {
   beforeEach(() => {
