@@ -13,7 +13,18 @@
  */
 
 class Queue {
+    constructor() {
+        this.queue = []
+    };
 
-}
+    add(element) {
+        this.queue.push(element)
+    };
+
+    remove() {
+        return this.queue.shift()
+    };
+
+};
 
 module.exports = Queue;
