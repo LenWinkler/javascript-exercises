@@ -13,7 +13,24 @@
 */
 
 function longestWord(sen) {
+    const wordsList = sen.split(' ');
+    let longest = '';
 
+    const removePunctuation = word => {
+        const regex = /[-\.!?,&;:'\(\)\[\]]/g;
+        wordWithoutPunc = word.replace(regex, '');
+
+        return wordWithoutPunc;
+    }
+
+    for (const word in wordsList) {
+        const wordWithoutPunc = removePunctuation(wordsList[word]);
+        if (wordWithoutPunc.length > longest.length) {
+            longest = wordWithoutPunc;
+        }
+    }
+
+    return longest;
 }
 
 module.exports = longestWord;
